@@ -1,0 +1,1377 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  50: '#f0f9ff',
+                  100: '#e0f2fe',
+                  200: '#bae6fd',
+                  300: '#7dd3fc',
+                  400: '#38bdf8',
+                  500: '#0ea5e9',
+                  600: '#0284c7',
+                  700: '#0369a1',
+                  800: '#075985',
+                  900: '#0c4a6e',
+                  950: '#082f49',
+                },
+                secondary: {
+                  50: '#f0fdf4',
+                  100: '#dcfce7',
+                  200: '#bbf7d0',
+                  300: '#86efac',
+                  400: '#4ade80',
+                  500: '#22c55e',
+                  600: '#16a34a',
+                  700: '#15803d',
+                  800: '#166534',
+                  900: '#14532d',
+                  950: '#052e16',
+                },
+                accent: {
+                  50: '#faf5ff',
+                  100: '#f3e8ff',
+                  200: '#e9d5ff',
+                  300: '#d8b4fe',
+                  400: '#c084fc',
+                  500: '#a855f7',
+                  600: '#9333ea',
+                  700: '#7e22ce',
+                  800: '#6b21a8',
+                  900: '#581c87',
+                  950: '#3b0764',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- Offline notification -->
+      <div class="fixed bottom-4 right-4 transform translate-y-full opacity-0 transition-all duration-300 offline:translate-y-0 offline:opacity-100">
+        <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
+          You are currently offline
+        </div>
+      </div>
+   </body>
+</html><element id="ba380fd8-b493-4772-8619-d8ab3693bb43" data-section-id="ba380fd8-b493-4772-8619-d8ab3693bb43">
+
+<htmlCode>
+<section id="navbar_hero" class="relative min-h-screen overflow-hidden">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <h1 class="text-2xl font-bold font-heading text-primary-600">PancakeHouse</h1>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-primary-600 font-medium">Home</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600 font-medium">Menu</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600 font-medium">Order</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600 font-medium">Locations</a>
+          <a href="#" class="text-gray-700 hover:text-primary-600 font-medium">Contact Us</a>
+        </div>
+
+        <!-- Search Bar & Order Button -->
+        <div class="hidden md:flex items-center space-x-4">
+          <div class="relative">
+            <input type="text" placeholder="Search..." class="w-48 pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:border-primary-500">
+            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          </div>
+          <button class="bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+            Order Now
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button class="text-gray-700 hover:text-primary-600">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="pt-16 min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Hero Content -->
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl md:text-5xl font-bold font-heading mb-6 animate-fade-in">
+            Delicious Pancakes Made Just For You
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 animate-fade-in delay-200">
+            Start your day with our fluffy, handcrafted pancakes. Made fresh to order with premium ingredients.
+          </p>
+          <button class="bg-primary-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-primary-700 transition duration-300 animate-slide-up">
+            Order Your Stack Now
+          </button>
+        </div>
+
+        <!-- Testimonial Carousel -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 animate-slide-up">
+          <div class="flex items-center mb-4">
+            <img src="https://avatar.iran.liara.run/public" alt="Customer" class="w-12 h-12 rounded-full">
+            <div class="ml-4">
+              <div class="text-lg font-semibold">Amazing Pancakes!</div>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">
+            "The best pancakes I've ever had! The customization options are endless and the service is fantastic."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="99cd2af6-f62b-4f19-bc4d-bd80eb3e929a" data-section-id="99cd2af6-f62b-4f19-bc4d-bd80eb3e929a">
+
+<htmlCode>
+<section id="todays_specials" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">Today's Specials</h2>
+      <p class="text-lg text-gray-600">Fresh from our kitchen, these daily specials are available for a limited time</p>
+    </div>
+
+    <!-- Special Items Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Special Item 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div class="relative">
+          <div class="aspect-video bg-gray-200">
+            <img src="https://placehold.co/600x400/EEE/31304D?text=Blueberry+Dream" alt="Blueberry Pancakes" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute top-4 right-4 bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            20% OFF
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Blueberry Dream Stack</h3>
+          <p class="text-gray-600 mb-4">Fresh blueberries, whipped cream, maple syrup</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary-600">$12.99</span>
+              <span class="text-sm text-gray-500 line-through">$15.99</span>
+            </div>
+            <button class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Item 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div class="relative">
+          <div class="aspect-video bg-gray-200">
+            <img src="https://placehold.co/600x400/EEE/31304D?text=Chocolate+Lover" alt="Chocolate Pancakes" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute top-4 right-4 bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            NEW
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Chocolate Lover's Paradise</h3>
+          <p class="text-gray-600 mb-4">Triple chocolate, strawberries, chocolate sauce</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary-600">$14.99</span>
+            </div>
+            <button class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Item 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div class="relative">
+          <div class="aspect-video bg-gray-200">
+            <img src="https://placehold.co/600x400/EEE/31304D?text=Nutella+Banana" alt="Nutella Banana Pancakes" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute top-4 right-4 bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            POPULAR
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Nutella Banana Bliss</h3>
+          <p class="text-gray-600 mb-4">Nutella spread, fresh bananas, whipped cream</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary-600">$13.99</span>
+            </div>
+            <button class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View All Button -->
+    <div class="text-center mt-12">
+      <button class="bg-white border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-full hover:bg-primary-50 transition duration-300 font-medium">
+        View Full Menu
+      </button>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="9617b62b-ece3-4935-9f43-b8a3d016e059" data-section-id="9617b62b-ece3-4935-9f43-b8a3d016e059">
+
+<htmlCode>
+<section id="menu_categories" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">Our Menu</h2>
+      <p class="text-lg text-gray-600">Explore our delicious selection of handcrafted pancakes</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="mb-12">
+      <div class="flex flex-wrap justify-center gap-4" x-data="{ activeTab: 'all' }">
+        <button 
+          @click="activeTab = 'all'" 
+          :class="{ 'bg-primary-600 text-white': activeTab === 'all', 'bg-gray-100 text-gray-700 hover:bg-gray-200': activeTab !== 'all' }"
+          class="px-6 py-2 rounded-full font-medium transition duration-300">
+          All
+        </button>
+        <button 
+          @click="activeTab = 'classic'" 
+          :class="{ 'bg-primary-600 text-white': activeTab === 'classic', 'bg-gray-100 text-gray-700 hover:bg-gray-200': activeTab !== 'classic' }"
+          class="px-6 py-2 rounded-full font-medium transition duration-300">
+          Classic
+        </button>
+        <button 
+          @click="activeTab = 'sweet'" 
+          :class="{ 'bg-primary-600 text-white': activeTab === 'sweet', 'bg-gray-100 text-gray-700 hover:bg-gray-200': activeTab !== 'sweet' }"
+          class="px-6 py-2 rounded-full font-medium transition duration-300">
+          Sweet
+        </button>
+        <button 
+          @click="activeTab = 'savory'" 
+          :class="{ 'bg-primary-600 text-white': activeTab === 'savory', 'bg-gray-100 text-gray-700 hover:bg-gray-200': activeTab !== 'savory' }"
+          class="px-6 py-2 rounded-full font-medium transition duration-300">
+          Savory
+        </button>
+        <button 
+          @click="activeTab = 'seasonal'" 
+          :class="{ 'bg-primary-600 text-white': activeTab === 'seasonal', 'bg-gray-100 text-gray-700 hover:bg-gray-200': activeTab !== 'seasonal' }"
+          class="px-6 py-2 rounded-full font-medium transition duration-300">
+          Seasonal
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Menu Item 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="relative">
+          <div class="aspect-video bg-gray-200">
+            <img src="https://placehold.co/600x400/EEE/31304D?text=Classic+Stack" alt="Classic Pancakes" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute top-4 right-4 bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            Best Seller
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Classic Buttermilk Stack</h3>
+            <span class="text-lg font-semibold text-primary-600">$9.99</span>
+          </div>
+          <p class="text-gray-600 mb-4">Our signature buttermilk pancakes served with maple syrup and butter</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400"><i class="fas fa-star"></i> 4.9</span>
+              <span class="text-gray-400">(128)</span>
+            </div>
+            <button class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Item 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="relative">
+          <div class="aspect-video bg-gray-200">
+            <img src="https://placehold.co/600x400/EEE/31304D?text=Berry+Blast" alt="Berry Blast Pancakes" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute top-4 right-4 bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            Seasonal
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Berry Blast</h3>
+            <span class="text-lg font-semibold text-primary-600">$12.99</span>
+          </div>
+          <p class="text-gray-600 mb-4">Mixed berries, whipped cream, berry compote, and maple syrup</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400"><i class="fas fa-star"></i> 4.8</span>
+              <span class="text-gray-400">(96)</span>
+            </div>
+            <button class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Item 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="relative">
+          <div class="aspect-video bg-gray-200">
+            <img src="https://placehold.co/600x400/EEE/31304D?text=Savory+Special" alt="Savory Special Pancakes" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute top-4 right-4 bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            New
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-xl font-bold text-gray-900">Savory Special</h3>
+            <span class="text-lg font-semibold text-primary-600">$14.99</span>
+          </div>
+          <p class="text-gray-600 mb-4">Bacon, cheddar, chives, and hollandaise sauce</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400"><i class="fas fa-star"></i> 4.7</span>
+              <span class="text-gray-400">(64)</span>
+            </div>
+            <button class="bg-primary-600 text-white px-4 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-12">
+      <button class="bg-white border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-full hover:bg-primary-50 transition duration-300 font-medium">
+        Load More <i class="fas fa-chevron-down ml-2"></i>
+      </button>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="2172c364-cbff-466a-bb18-3864bdac71cb" data-section-id="2172c364-cbff-466a-bb18-3864bdac71cb">
+
+<htmlCode>
+<section id="pancake_customizer" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">Create Your Perfect Stack</h2>
+      <p class="text-lg text-gray-600">Customize every layer of your pancakes just the way you like them</p>
+    </div>
+
+    <!-- Customizer Container -->
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Preview Section -->
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <div class="aspect-square rounded-xl bg-gray-100 flex items-center justify-center mb-6">
+          <img src="https://placehold.co/400x400/EEE/31304D?text=Custom+Stack" alt="Custom Pancake Preview" class="w-full h-full object-cover rounded-xl">
+        </div>
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Custom Stack</h3>
+          <p class="text-lg text-primary-600 font-semibold">Starting at $8.99</p>
+        </div>
+      </div>
+
+      <!-- Customization Options -->
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <!-- Base Options -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">1. Choose Your Base</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <button class="bg-primary-50 border-2 border-primary-600 text-primary-600 px-4 py-3 rounded-xl font-medium hover:bg-primary-100 transition duration-300">
+              Buttermilk
+            </button>
+            <button class="bg-gray-50 border-2 border-gray-300 text-gray-700 px-4 py-3 rounded-xl font-medium hover:bg-gray-100 transition duration-300">
+              Whole Wheat
+            </button>
+          </div>
+        </div>
+
+        <!-- Toppings -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">2. Select Toppings</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <label class="flex items-center space-x-3 p-3 border rounded-xl hover:bg-gray-50 cursor-pointer">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-primary-600">
+              <span>Fresh Berries</span>
+            </label>
+            <label class="flex items-center space-x-3 p-3 border rounded-xl hover:bg-gray-50 cursor-pointer">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-primary-600">
+              <span>Banana Slices</span>
+            </label>
+            <label class="flex items-center space-x-3 p-3 border rounded-xl hover:bg-gray-50 cursor-pointer">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-primary-600">
+              <span>Chocolate Chips</span>
+            </label>
+            <label class="flex items-center space-x-3 p-3 border rounded-xl hover:bg-gray-50 cursor-pointer">
+              <input type="checkbox" class="form-checkbox h-5 w-5 text-primary-600">
+              <span>Whipped Cream</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Syrups -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">3. Choose Your Syrup</h3>
+          <div class="space-y-4">
+            <label class="flex items-center space-x-3 p-3 border rounded-xl hover:bg-gray-50 cursor-pointer">
+              <input type="radio" name="syrup" class="form-radio h-5 w-5 text-primary-600">
+              <span>Classic Maple Syrup</span>
+            </label>
+            <label class="flex items-center space-x-3 p-3 border rounded-xl hover:bg-gray-50 cursor-pointer">
+              <input type="radio" name="syrup" class="form-radio h-5 w-5 text-primary-600">
+              <span>Berry Compote</span>
+            </label>
+            <label class="flex items-center space-x-3 p-3 border rounded-xl hover:bg-gray-50 cursor-pointer">
+              <input type="radio" name="syrup" class="form-radio h-5 w-5 text-primary-600">
+              <span>Chocolate Sauce</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quantity Selector -->
+        <div class="mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">4. Stack Size</h3>
+          <div class="flex items-center justify-center bg-gray-50 rounded-xl p-4">
+            <button class="bg-white w-10 h-10 rounded-full shadow flex items-center justify-center hover:bg-gray-100">
+              <i class="fas fa-minus text-gray-600"></i>
+            </button>
+            <span class="mx-8 text-2xl font-bold">3</span>
+            <button class="bg-white w-10 h-10 rounded-full shadow flex items-center justify-center hover:bg-gray-100">
+              <i class="fas fa-plus text-gray-600"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button class="w-full bg-primary-600 text-white py-4 rounded-xl text-lg font-semibold hover:bg-primary-700 transition duration-300">
+          Add to Cart - $12.99
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="5b9de2dc-3922-4eea-b970-0b9ab1d99dc8" data-section-id="5b9de2dc-3922-4eea-b970-0b9ab1d99dc8">
+
+<htmlCode>
+<section id="how_it_works" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">How It Works</h2>
+      <p class="text-lg text-gray-600">Get your perfect pancakes in four simple steps</p>
+    </div>
+
+    <!-- Steps Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Step 1 -->
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+          <i class="fas fa-mouse-pointer text-2xl text-primary-600"></i>
+        </div>
+        <div class="absolute top-8 left-1/2 w-full border-t-2 border-dashed border-primary-200 -z-10 hidden lg:block"></div>
+        <span class="bg-accent-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold mb-4">1</span>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Choose Your Stack</h3>
+        <p class="text-gray-600">Select from our menu or create your custom pancake stack</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+          <i class="fas fa-paint-brush text-2xl text-primary-600"></i>
+        </div>
+        <div class="absolute top-8 left-1/2 w-full border-t-2 border-dashed border-primary-200 -z-10 hidden lg:block"></div>
+        <span class="bg-accent-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold mb-4">2</span>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Customize It</h3>
+        <p class="text-gray-600">Add your favorite toppings and choose your perfect syrup</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+          <i class="fas fa-credit-card text-2xl text-primary-600"></i>
+        </div>
+        <div class="absolute top-8 left-1/2 w-full border-t-2 border-dashed border-primary-200 -z-10 hidden lg:block"></div>
+        <span class="bg-accent-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold mb-4">3</span>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Place Order</h3>
+        <p class="text-gray-600">Securely checkout and pay for your delicious creation</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+          <i class="fas fa-utensils text-2xl text-primary-600"></i>
+        </div>
+        <span class="bg-accent-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold mb-4">4</span>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Enjoy!</h3>
+        <p class="text-gray-600">Pick up your order or have it delivered to your door</p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-16 text-center">
+      <button class="bg-primary-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-primary-700 transition duration-300 shadow-lg hover:shadow-xl">
+        Start Your Order Now
+      </button>
+      <p class="mt-4 text-gray-600">Average preparation time: 15-20 minutes</p>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="b8051bf0-7f5d-43ac-9d6b-93af4b6cfad6" data-section-id="b8051bf0-7f5d-43ac-9d6b-93af4b6cfad6">
+
+<htmlCode>
+<section id="our_story" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">Our Story</h2>
+      <p class="text-lg text-gray-600">A tradition of excellence since 1985</p>
+    </div>
+
+    <!-- Story Content -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Story Images -->
+      <div class="space-y-6">
+        <div class="grid grid-cols-2 gap-6">
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://placehold.co/400x300/EEE/31304D?text=Original+Store" alt="Our First Location" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://placehold.co/400x300/EEE/31304D?text=Family+Recipe" alt="Family Recipe" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img src="https://placehold.co/800x400/EEE/31304D?text=Kitchen+Team" alt="Our Kitchen Team" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Story Text -->
+      <div class="space-y-8">
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-history text-2xl text-primary-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 ml-4">Where It All Began</h3>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Started by the Smith family in 1985, PancakeHouse began as a small breakfast spot with a passion for creating the perfect pancake. Our secret family recipe, passed down through generations, continues to delight customers to this day.
+          </p>
+          <p class="text-gray-600">
+            What started as a humble local diner has grown into multiple locations, but our commitment to quality and service remains unchanged.
+          </p>
+        </div>
+
+        <!-- Values -->
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-leaf text-primary-600 text-xl"></i>
+              <h4 class="text-lg font-bold text-gray-900 ml-3">Fresh Ingredients</h4>
+            </div>
+            <p class="text-gray-600">Locally sourced, premium ingredients for the best taste</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-heart text-primary-600 text-xl"></i>
+              <h4 class="text-lg font-bold text-gray-900 ml-3">Made with Love</h4>
+            </div>
+            <p class="text-gray-600">Every stack is crafted with care and attention to detail</p>
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="flex items-center justify-center space-x-8 py-6">
+          <div class="text-center">
+            <i class="fas fa-award text-4xl text-yellow-400 mb-2"></i>
+            <p class="text-sm font-medium text-gray-600">Best Breakfast 2023</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-medal text-4xl text-yellow-400 mb-2"></i>
+            <p class="text-sm font-medium text-gray-600">Customer Choice</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-trophy text-4xl text-yellow-400 mb-2"></i>
+            <p class="text-sm font-medium text-gray-600">Local Favorite</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="mt-16 text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-8">Meet Our Team</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <img src="https://avatar.iran.liara.run/public" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h4 class="font-bold text-gray-900">Head Chef</h4>
+          <p class="text-gray-600">John Smith</p>
+        </div>
+        <div class="text-center">
+          <img src="https://avatar.iran.liara.run/public" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h4 class="font-bold text-gray-900">Pastry Chef</h4>
+          <p class="text-gray-600">Sarah Johnson</p>
+        </div>
+        <div class="text-center">
+          <img src="https://avatar.iran.liara.run/public" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h4 class="font-bold text-gray-900">Manager</h4>
+          <p class="text-gray-600">Mike Davis</p>
+        </div>
+        <div class="text-center">
+          <img src="https://avatar.iran.liara.run/public" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h4 class="font-bold text-gray-900">Customer Service</h4>
+          <p class="text-gray-600">Emily Chen</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="7f78b400-d7da-45a2-815b-69b5ca10fe65" data-section-id="7f78b400-d7da-45a2-815b-69b5ca10fe65">
+
+<htmlCode>
+<section id="locations" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">Our Locations</h2>
+      <p class="text-lg text-gray-600">Find your nearest PancakeHouse and visit us today</p>
+    </div>
+
+    <!-- Location Search -->
+    <div class="max-w-xl mx-auto mb-12">
+      <div class="relative">
+        <input type="text" placeholder="Enter your zip code or city" class="w-full px-6 py-4 bg-gray-50 border border-gray-300 rounded-full focus:outline-none focus:border-primary-500 text-gray-900">
+        <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition duration-300">
+          Find Stores
+        </button>
+      </div>
+    </div>
+
+    <!-- Locations Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Location Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-video bg-gray-200">
+          <img src="https://placehold.co/600x400/EEE/31304D?text=Downtown+Location" alt="Downtown Store" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Downtown</h3>
+          <div class="space-y-3 text-gray-600">
+            <p class="flex items-center">
+              <i class="fas fa-map-marker-alt w-6 text-primary-600"></i>
+              123 Main Street, Downtown
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-phone w-6 text-primary-600"></i>
+              (555) 123-4567
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-clock w-6 text-primary-600"></i>
+              7:00 AM - 9:00 PM
+            </p>
+          </div>
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400"><i class="fas fa-star"></i> 4.8</span>
+              <span class="text-gray-400">(240 reviews)</span>
+            </div>
+            <button class="text-primary-600 hover:text-primary-700 font-medium">
+              Get Directions <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-video bg-gray-200">
+          <img src="https://placehold.co/600x400/EEE/31304D?text=Westside+Location" alt="Westside Store" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Westside</h3>
+          <div class="space-y-3 text-gray-600">
+            <p class="flex items-center">
+              <i class="fas fa-map-marker-alt w-6 text-primary-600"></i>
+              456 West Avenue
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-phone w-6 text-primary-600"></i>
+              (555) 234-5678
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-clock w-6 text-primary-600"></i>
+              6:30 AM - 10:00 PM
+            </p>
+          </div>
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400"><i class="fas fa-star"></i> 4.9</span>
+              <span class="text-gray-400">(180 reviews)</span>
+            </div>
+            <button class="text-primary-600 hover:text-primary-700 font-medium">
+              Get Directions <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Card 3 -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="aspect-video bg-gray-200">
+          <img src="https://placehold.co/600x400/EEE/31304D?text=Eastside+Location" alt="Eastside Store" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Eastside</h3>
+          <div class="space-y-3 text-gray-600">
+            <p class="flex items-center">
+              <i class="fas fa-map-marker-alt w-6 text-primary-600"></i>
+              789 East Boulevard
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-phone w-6 text-primary-600"></i>
+              (555) 345-6789
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-clock w-6 text-primary-600"></i>
+              7:00 AM - 8:00 PM
+            </p>
+          </div>
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-yellow-400"><i class="fas fa-star"></i> 4.7</span>
+              <span class="text-gray-400">(156 reviews)</span>
+            </div>
+            <button class="text-primary-600 hover:text-primary-700 font-medium">
+              Get Directions <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coming Soon Banner -->
+    <div class="mt-12 bg-primary-50 rounded-2xl p-8 text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">New Location Coming Soon!</h3>
+      <p class="text-gray-600 mb-6">We're expanding to serve you better. Stay tuned for our new Northside location.</p>
+      <button class="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-primary-700 transition duration-300">
+        Get Notified
+      </button>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="bef14e01-e756-4d01-8732-e55ed062affc" data-section-id="bef14e01-e756-4d01-8732-e55ed062affc">
+
+<htmlCode>
+<section id="testimonials" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold font-heading text-gray-900 mb-4">What Our Customers Say</h2>
+      <p class="text-lg text-gray-600">Join thousands of happy customers who start their day with our pancakes</p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Testimonial Card 1 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <div class="flex items-center mb-6">
+          <img src="https://avatar.iran.liara.run/public" alt="Customer" class="w-14 h-14 rounded-full">
+          <div class="ml-4">
+            <h3 class="font-bold text-gray-900">Sarah M.</h3>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic mb-4">"The best pancakes I've ever had! The customization options are endless and the service is fantastic. A must-try for breakfast lovers!"</p>
+        <p class="text-sm text-gray-500">Visited Downtown Location</p>
+      </div>
+
+      <!-- Testimonial Card 2 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <div class="flex items-center mb-6">
+          <img src="https://avatar.iran.liara.run/public" alt="Customer" class="w-14 h-14 rounded-full">
+          <div class="ml-4">
+            <h3 class="font-bold text-gray-900">Michael R.</h3>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic mb-4">"The Nutella Banana Bliss is absolutely amazing! Fresh ingredients and perfect portion sizes. My weekend breakfast spot!"</p>
+        <p class="text-sm text-gray-500">Visited Westside Location</p>
+      </div>
+
+      <!-- Testimonial Card 3 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <div class="flex items-center mb-6">
+          <img src="https://avatar.iran.liara.run/public" alt="Customer" class="w-14 h-14 rounded-full">
+          <div class="ml-4">
+            <h3 class="font-bold text-gray-900">Emily L.</h3>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic mb-4">"Love the variety and quality! The staff is always friendly and the atmosphere is perfect for both family breakfasts and business meetings."</p>
+        <p class="text-sm text-gray-500">Visited Eastside Location</p>
+      </div>
+    </div>
+
+    <!-- Review Stats -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="text-4xl font-bold text-primary-600 mb-2">4.9</div>
+        <div class="flex justify-center text-yellow-400 mb-2">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="text-gray-600">Average Rating</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-primary-600 mb-2">15k+</div>
+        <p class="text-gray-600">Happy Customers</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-primary-600 mb-2">98%</div>
+        <p class="text-gray-600">Would Recommend</p>
+      </div>
+      <div class="text-center">
+        <div class="text-4xl font-bold text-primary-600 mb-2">3k+</div>
+        <p class="text-gray-600">Reviews</p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-16 text-center">
+      <a href="#" class="inline-block bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-primary-700 transition duration-300">
+        Read More Reviews <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+</htmlCode></element><element id="6b15368c-79ef-4952-b307-8307a6aa4314" data-section-id="6b15368c-79ef-4952-b307-8307a6aa4314">
+
+<htmlCode>
+<aside id="cart_sidebar" class="fixed top-0 right-0 h-screen w-96 bg-white shadow-2xl transform transition-transform duration-300 translate-x-full z-50" x-data="{ isOpen: false }" :class="{ '!translate-x-0': isOpen }">
+  <!-- Cart Header -->
+  <div class="p-6 border-b">
+    <div class="flex justify-between items-center">
+      <h2 class="text-xl font-bold text-gray-900">Your Cart</h2>
+      <button @click="isOpen = false" class="text-gray-500 hover:text-gray-700">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Items -->
+  <div class="overflow-y-auto h-[calc(100vh-280px)] p-6">
+    <!-- Cart Item -->
+    <div class="flex items-start space-x-4 mb-6 pb-6 border-b">
+      <img src="https://placehold.co/100x100/EEE/31304D?text=Blueberry" alt="Blueberry Pancakes" class="w-20 h-20 rounded-lg object-cover">
+      <div class="flex-1">
+        <div class="flex justify-between">
+          <h3 class="font-semibold text-gray-900">Blueberry Dream Stack</h3>
+          <button class="text-gray-400 hover:text-red-500">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+        <p class="text-sm text-gray-600">Extra blueberries</p>
+        <div class="flex items-center mt-2">
+          <button class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-gray-100">
+            <i class="fas fa-minus text-sm"></i>
+          </button>
+          <span class="mx-3 w-8 text-center">2</span>
+          <button class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-gray-100">
+            <i class="fas fa-plus text-sm"></i>
+          </button>
+          <span class="ml-auto font-semibold">$25.98</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Favorites Section -->
+    <div class="mt-8">
+      <h3 class="font-bold text-gray-900 mb-4">Your Favorites</h3>
+      <div class="space-y-4">
+        <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+          <img src="https://placehold.co/80x80/EEE/31304D?text=Classic" alt="Classic Stack" class="w-16 h-16 rounded-lg object-cover">
+          <div>
+            <h4 class="font-semibold text-gray-900">Classic Buttermilk</h4>
+            <p class="text-sm text-gray-600">$9.99</p>
+          </div>
+          <button class="ml-auto bg-primary-600 text-white p-2 rounded-full hover:bg-primary-700">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
+          <img src="https://placehold.co/80x80/EEE/31304D?text=Nutella" alt="Nutella Stack" class="w-16 h-16 rounded-lg object-cover">
+          <div>
+            <h4 class="font-semibold text-gray-900">Nutella Banana</h4>
+            <p class="text-sm text-gray-600">$13.99</p>
+          </div>
+          <button class="ml-auto bg-primary-600 text-white p-2 rounded-full hover:bg-primary-700">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Footer -->
+  <div class="absolute bottom-0 left-0 right-0 bg-white border-t p-6">
+    <div class="flex justify-between mb-4">
+      <span class="text-gray-600">Subtotal</span>
+      <span class="font-semibold">$25.98</span>
+    </div>
+    <button class="w-full bg-primary-600 text-white py-3 rounded-xl font-semibold hover:bg-primary-700 transition duration-300">
+      Checkout - $25.98
+    </button>
+  </div>
+
+  <!-- Cart Toggle Button -->
+  <button @click="isOpen = !isOpen" class="fixed top-1/2 -left-12 bg-primary-600 text-white p-3 rounded-l-xl transform -translate-y-1/2 hover:bg-primary-700 transition duration-300">
+    <i class="fas fa-shopping-cart text-xl"></i>
+    <span class="absolute -top-2 -right-2 bg-accent-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm">2</span>
+  </button>
+</aside>
+</htmlCode></element><element id="ee8242c4-b7bf-4e77-b4a8-3876d6714e4f" data-section-id="ee8242c4-b7bf-4e77-b4a8-3876d6714e4f">
+
+<htmlCode>
+<footer id="footer" class="bg-gray-900 text-gray-400 pt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Footer Top Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-6 font-heading">PancakeHouse</h3>
+        <p class="mb-6">Serving delicious, handcrafted pancakes since 1985. Made with love and premium ingredients.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-yelp text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-6">Quick Links</h4>
+        <ul class="space-y-4">
+          <li><a href="#" class="hover:text-white transition-colors">Menu</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Locations</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Order Online</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Gift Cards</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-6">Support</h4>
+        <ul class="space-y-4">
+          <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">FAQs</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Accessibility</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-lg font-semibold text-white mb-6">Stay Updated</h4>
+        <p class="mb-4">Subscribe to our newsletter for special offers and updates</p>
+        <form class="space-y-4">
+          <div class="relative">
+            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+          </div>
+          <button class="w-full bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition duration-300">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-gray-800 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="text-sm">
+          © 2024 PancakeHouse. All rights reserved.
+        </div>
+        <div class="flex items-center space-x-4">
+          <img src="https://placehold.co/40x25/EEE/31304D?text=Visa" alt="Visa" class="h-6">
+          <img src="https://placehold.co/40x25/EEE/31304D?text=MC" alt="Mastercard" class="h-6">
+          <img src="https://placehold.co/40x25/EEE/31304D?text=Amex" alt="American Express" class="h-6">
+          <img src="https://placehold.co/40x25/EEE/31304D?text=PayPal" alt="PayPal" class="h-6">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-primary-600 text-white p-3 rounded-full hover:bg-primary-700 transition duration-300 shadow-lg">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</footer>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
